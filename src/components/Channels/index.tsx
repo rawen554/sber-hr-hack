@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
           transtition: '0.25s',
 
           '&.active': {
-              backgroundColor: '#EBF2F6',
+              backgroundColor: '#E3F7ED',
               cursor: 'default',
           },
           '&:not(.active):hover': {
