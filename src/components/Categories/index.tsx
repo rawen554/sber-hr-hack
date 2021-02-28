@@ -58,7 +58,7 @@ export const Categories: React.FC<IProps> = inject('channelsStore')(observer(({ 
             <Box className={classes.root}>
                 {cats?.map(cat => {
                     return (
-                        <Chip key={cat.id} avatar={<Avatar>{cat.title.toUpperCase().charAt(0)}</Avatar>} label={cat.title} onClick={() => {}} />
+                        <Chip key={cat.id} label={cat.title} onClick={() => {}} />
                     );
                 })}
             </Box>
