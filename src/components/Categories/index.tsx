@@ -1,8 +1,7 @@
-import { Chip, Avatar, Box, createStyles, makeStyles, Paper, Tab, Tabs, Typography } from '@material-ui/core';
+import { Chip, Box, createStyles, makeStyles, Typography } from '@material-ui/core';
 import { inject, observer } from 'mobx-react';
 import React, { useEffect } from 'react';
 import { ChannelsStore } from '../../stores/channelsStore';
-import { ICategory } from '../../stores/models';
 
 const useStyles = makeStyles((theme) =>
   createStyles({
