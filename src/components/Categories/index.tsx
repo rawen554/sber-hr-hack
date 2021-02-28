@@ -1,4 +1,4 @@
-import { Chip, Box, createStyles, makeStyles, Typography } from '@material-ui/core';
+import { Chip, Box, createStyles, makeStyles, Typography, Button } from '@material-ui/core';
 import { inject, observer } from 'mobx-react';
 import React, { useEffect } from 'react';
 import { ChannelsStore } from '../../stores/channelsStore';
@@ -8,6 +8,14 @@ const useStyles = makeStyles((theme) =>
     catHeader: {
         fontWeight: 'bold',
         fontSize: 28,
+    },
+    button: {
+        fontWeight: 800,
+        fontSize: 16,
+        color: '#7ECF9D',
+        textTransform: 'none',
+        height: 32,
+        border: 'none !important',
     },
     root: {
       display: 'flex',
@@ -60,6 +68,7 @@ export const Categories: React.FC<IProps> = inject('channelsStore')(observer(({ 
                         <Chip key={cat.id} label={cat.title} onClick={() => {}} />
                     );
                 })}
+                <Button className={classes.button} variant="text">Показать ещё</Button>
             </Box>
         </Box>
     );
