@@ -141,7 +141,7 @@ export const Post: React.FC<IProps> = ({ post }) => {
             <Grid item xs={9}>
                 <Typography className={classes.title}>{post.title}</Typography>
                 <Typography className={classes.description}>{post.description}</Typography>
-                <Typography className={classes.tags}>{post?.tags?.reduce((acc, tag) => acc = `${acc}${tag.title} #`, '#')}</Typography>
+                <Typography className={classes.tags}>{post?.tags?.reduce((acc, tag) => acc = `#${acc}${tag.title}`, '')}</Typography>
             </Grid>
             <Grid item xs={2}>
                 <Box className={classes.pointsBlock}>

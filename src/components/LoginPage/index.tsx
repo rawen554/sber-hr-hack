@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
       height: '100vh',
     },
     image: {
-      backgroundImage: 'url(https://source.unsplash.com/random)',
+      background: 'linear-gradient(321deg, rgba(2,0,36,1) 0%, rgba(0,133,255,1) 30%, rgba(20,132,70,1) 81%)',
       backgroundRepeat: 'no-repeat',
       backgroundColor:
         theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],

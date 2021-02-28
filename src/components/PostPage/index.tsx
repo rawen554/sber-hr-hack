@@ -112,7 +112,7 @@ export const PostPage: React.FC<IProps> = inject('feedStore', 'userStore')(obser
                     <Typography className={classes.description}>{feedStore.currentPost.description}</Typography>
                 </Grid>
                 <Grid item xs={12}>
-                    <Typography className={classes.tags}>{feedStore.currentPost.tags.reduce((acc, tag) => acc += `${tag.title} #`, '#')}</Typography>
+                    <Typography className={classes.tags}>{feedStore.currentPost.tags.reduce((acc, tag) => acc += `#${tag.title}`, '')}</Typography>
                 </Grid>
             </>
         );
@@ -153,7 +153,7 @@ export const PostPage: React.FC<IProps> = inject('feedStore', 'userStore')(obser
                                         <Avatar />
                                         <Box marginLeft="12px">
                                             <Typography className={classes.channelTitle}>{`${feedStore.currentPost.createdBy.lastName} ${feedStore.currentPost.createdBy.firstName.charAt(0)}.`}</Typography>
-                                            <Typography  className={classes.small}>{userStore.currentUser.points}</Typography>
+                                            <Typography  className={classes.small}>{userStore.currentUser.points || 0} GreenPoints</Typography>
                                         </Box>
                                     </Box>
                                 </WidgetBox>
